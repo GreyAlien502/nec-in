@@ -1409,7 +1409,7 @@ Flags: W
 LayerCount: 2
 EndChar
 EndChars
-BitmapFont: 6 170 5 1 1
+BitmapFont: 6 171 5 1 1
 BDFChar: 0 32 4 0 0 0 0
 z
 BDFChar: 1 33 4 1 1 -1 3
@@ -1424,7 +1424,7 @@ BDFChar: 5 37 4 0 2 -1 3
 J07+-+92BA
 BDFChar: 6 38 4 0 2 -1 3
 ^qemDhuE`W
-BDFChar: 7 39 4 1 1 3 4
+BDFChar: 7 39 4 1 1 2 3
 J:IV"
 BDFChar: 8 40 4 0 1 -1 3
 5_+B85QCca
