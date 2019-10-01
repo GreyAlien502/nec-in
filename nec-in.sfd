@@ -1,4 +1,4 @@
-SplineFontDB: 3.0
+SplineFontDB: 3.2
 FontName: nec-in
 FullName: nec-in
 FamilyName: nec-in
@@ -2322,8 +2322,8 @@ BDFChar: 62 94 4 0 2 2 3
 5bJ)W
 BDFChar: 63 95 4 0 2 0 0
 huE`W
-BDFChar: 64 96 4 0 2 1 3
-J3Y4W
+BDFChar: 64 96 4 0 1 2 3
+J3X)7
 BDFChar: 65 97 4 0 2 0 2
 @,TrC
 BDFChar: 66 98 4 0 2 0 3
