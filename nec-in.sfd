@@ -20,7 +20,7 @@ OS2Version: 0
 OS2_WeightWidthSlopeOnly: 0
 OS2_UseTypoMetrics: 1
 CreationTime: 1546422708
-ModificationTime: 1551663264
+ModificationTime: 1585516312
 OS2TypoAscent: 0
 OS2TypoAOffset: 1
 OS2TypoDescent: 0
@@ -2179,7 +2179,7 @@ EndChar
 
 StartChar: uni0451
 Encoding: 1105 1105 266
-Width: 5
+Width: 3
 VWidth: 0
 Flags: W
 LayerCount: 2
@@ -2611,7 +2611,7 @@ i1T#$
 BDFChar: 207 1077 4 0 2 0 2
 i8DBN
 BDFChar: 208 1092 4 0 2 -1 2
-5iCQc
+i8ENY
 BDFChar: 209 1075 4 0 2 0 2
 i.-=X
 BDFChar: 210 1093 4 0 2 0 2
@@ -2625,7 +2625,7 @@ TYR3#
 BDFChar: 214 1083 4 0 2 0 2
 +CLiB
 BDFChar: 215 1084 4 0 2 0 2
-?sqmm
+i8C7.
 BDFChar: 216 1085 4 0 2 0 2
 T\uIC
 BDFChar: 217 1086 4 0 2 0 2
@@ -2645,7 +2645,7 @@ TV16$
 BDFChar: 224 1078 4 0 2 0 2
 i'?3#
 BDFChar: 225 1074 4 0 2 0 2
-i5"7N
+^u4,N
 BDFChar: 226 1100 4 0 2 0 2
 JDf>c
 BDFChar: 227 1099 4 0 2 0 2
@@ -2667,7 +2667,7 @@ BDFChar: 234 1070 4 0 2 -1 3
 BDFChar: 235 1040 4 0 2 -1 3
 i1T#$TE"rl
 BDFChar: 236 1041 4 0 2 -1 3
-@"@1.huE`W
+i./V9^]4?7
 BDFChar: 237 1062 4 0 2 -1 3
 TV.t9+92BA
 BDFChar: 238 1044 4 0 2 -1 3
@@ -2699,7 +2699,7 @@ i1Qa9TE"rl
 BDFChar: 251 1071 4 0 2 -1 3
 @%^o#TE"rl
 BDFChar: 252 1056 4 0 2 -1 3
-^nAJnJ,fQL
+i1T"YJ,fQL
 BDFChar: 253 1057 4 0 2 -1 3
 i.-?.huE`W
 BDFChar: 254 1058 4 0 2 -1 3
@@ -2715,7 +2715,7 @@ J:QRNhuE`W
 BDFChar: 259 1067 4 0 2 -1 3
 TV16$huE`W
 BDFChar: 260 1047 4 0 2 -1 3
-i#lDMhuE`W
+^`Ylb^]4?7
 BDFChar: 261 1064 4 0 2 -1 3
 i8EPOhuE`W
 BDFChar: 262 1069 4 0 2 -1 3
@@ -2726,7 +2726,7 @@ BDFChar: 264 1063 4 0 2 -1 3
 T\pq8+92BA
 BDFChar: 265 1066 4 0 2 -1 3
 ^d):8?iU0,
-BDFChar: 266 1105 6 0 2 0 3
+BDFChar: 266 1105 4 0 2 0 3
 T]"bD
 BDFChar: 267 1025 6 0 2 -1 3
 T]"aYhuE`W
