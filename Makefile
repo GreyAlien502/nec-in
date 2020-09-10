@@ -8,7 +8,7 @@ $(DIST)/nec-in.ttf: build/nec-in.ttf
 	cp $< $@
 
 build/nec-in.bdf: nec-in.sfd
-	python -c 'import fontforge; fontforge.open("$<").generate("build/nec-in.bdf");'
+	fontforge -c 'fontforge.open("$<").generate("build/nec-in.bdf")'
 	cp `ls build/nec-in-*.bdf -t | head -n1` $@
 
 build/nec-in.psf: build/nec-in.bdf
