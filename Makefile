@@ -17,12 +17,15 @@ build/nec-in.psf: build/nec-in.bdf
 		/usr/share/bdf2psf/ascii.set+:/usr/share/bdf2psf/useful.set \
 		512 \
 		$@
+
 build/nec-in.pf2: build/nec-in.bdf
 	grub-mkfont -s 6 -o $@ $<
 
-
-build/nec-in.ttf: build/nec-in.bdf
+build/without-diacritics.ttf: build/nec-in.bdf
 	bdf2ttf -o $@ $<
+
+build/nec-in.ttf: build/without-diacritics.ttf
+	python add-diacritics.py $< $@
 
 clean:
 	rm -rf build/
