@@ -24,8 +24,11 @@ build/nec-in.pf2: build/nec-in.bdf
 build/without-diacritics.ttf: build/nec-in.bdf
 	bdf2ttf -o $@ $<
 
-build/nec-in.ttf: build/without-diacritics.ttf
-	python add-diacritics.py $< $@
+build/nec-in.ttf: build/without-diacritics.ttf add_diacritics.py
+	python add_diacritics.py $< $@
+
+build/nec-in.c: build/nec-in.psf psf2c.sh
+	bash psf2c.sh $< > $@
 
 clean:
 	rm -rf build/
