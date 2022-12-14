@@ -2,7 +2,7 @@
 $(info $(shell mkdir -p build))
 DIST=~/.local/share/fonts/
 
-all: build/nec-in.woff2 build/nec-in.psf build/nec-in.pf2 build/nec-in.bdf
+all: build/nec-in.ttf build/nec-in.woff2 build/nec-in.psf build/nec-in.pf2 build/nec-in.bdf
 dist: $(DIST)/nec-in.ttf
 
 $(DIST)/nec-in.ttf: build/nec-in.ttf
@@ -30,6 +30,9 @@ build/merged.ttf build/unicode_to_keep: build/without-diacritics.ttf add_diacrit
 
 build/nec-in.woff build/nec-in.woff2: build/merged.ttf build/unicode_to_keep
 	pyftsubset build/merged.ttf --unicodes-file=build/unicode_to_keep --no-ignore-missing-unicodes --output-file=$@ --recommended-glyphs --flavor=`cut -d. -f2 <<<$@`
+
+build/nec-in.ttf: build/nec-in.woff
+	python -c "from fontTools.ttLib import woff2; woff2.decompress('$<', '$@')"
 
 build/nec-in.c: build/nec-in.psf psf2c.sh
 	bash psf2c.sh $< > $@
