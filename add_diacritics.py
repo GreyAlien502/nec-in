@@ -2,6 +2,7 @@ import fontforge, subprocess, sys, unicodedata
 
 p=type('',(),{'__pow__':lambda _,x:print(x)or x})()
 
+TONOS=ord(unicodedata.lookup('GREEK TONOS'))
 
 nec_in = fontforge.open(sys.argv[1])
 #handmade = [glyph for glyph in nec_in.glyphs()]
@@ -9,9 +10,17 @@ custom_chars = {chr(glyph.unicode) for glyph in nec_in.glyphs() if glyph.unicode
 
 #copy combining characters
 unifont = fontforge.open(subprocess.check_output('fc-match --format=%{file} Unifont'.split()).decode())
+for glyph in unifont.glyphs():
+       if glyph.unicode == TONOS:
+               print('found tonos')
+               glyph.width = 680
+               custom_chars.add(chr(glyph.unicode))
+       elif glyph.width != 0:
+               print('',glyph.unicode,end='\r')
+               unifont.removeGlyph(glyph)
 nec_in.mergeFonts(unifont)
 
-#build composite glyphs (really all of them)
+#build composite glyphs
 nec_in.selection.select(*(glyph for glyph in nec_in))
 nec_in.selection.invert()
 nec_in.build()
