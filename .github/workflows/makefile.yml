@@ -15,6 +15,6 @@ jobs:
     
     - name: make
       run: |
-        sudo apt-get install -y python3 fontforge python-fontforge bdf2psf fonttools fonts-unifont
+        sudo apt-get install -y python3 fontforge python3-fontforge bdf2psf fonttools fonts-unifont
         pip install bdf2ttf
         make
