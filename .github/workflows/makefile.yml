@@ -2,7 +2,7 @@ name: CI
 
 on:
   push:
-    branches: [ "master" ]
+    branches: [ "gh-action" ]
   pull_request:
     branches: [ "gh-action" ]
 
