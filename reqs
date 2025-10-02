@@ -1,5 +1,10 @@
-fontforge
-bdf2psf
-bdf2ttf
-psf2inc
-fonttools
+pacman
+	fontforge
+	python-fonttools
+	brotli
+pip
+	bdf2ttf
+aur
+	bdf2psf
+?
+	psf2inc
