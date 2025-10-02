@@ -38,9 +38,6 @@ build/nec-in.ttf: build/nec-in.woff
 build/nec-in.c: build/nec-in.psf psf2c.sh
 	bash psf2c.sh $< > $@
 
-build/nec-in.pil build/nec-in.pbm: build/nec-in.bdf
-	python -c 'import PIL.BdfFontFile,sys; PIL.BdfFontFile.BdfFontFile(open(sys.argv[1],"rb")).save(sys.argv[1])' "$<"
-
 build/uncompressed.flf: build/without-diacritics.ttf
 	python ttf2flf.py -s 6 $<  > $@
 
