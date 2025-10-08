@@ -3,7 +3,7 @@
 $(info $(shell mkdir -p build))
 DIST=~/.local/share/fonts/
 
-all: $(shell echo build/nec-in.{ttf,woff2,psf,pf2,bdf,flf})
+all: $(shell echo build/nec-in.{ttf,woff2,psf.gz,pf2,bdf,flf})
 dist: $(DIST)/nec-in.ttf
 
 $(DIST)/nec-in.ttf: build/nec-in.ttf
@@ -19,6 +19,9 @@ build/nec-in.psf: build/nec-in.bdf
 		/usr/share/bdf2psf/ascii.set+:/usr/share/bdf2psf/useful.set \
 		512 \
 		$@
+
+build/nec-in.psf.gz: build/nec-in.psf
+	gzip -k $<
 
 build/nec-in.pf2: build/nec-in.bdf
 	grub-mkfont -s 6 -o $@ $<

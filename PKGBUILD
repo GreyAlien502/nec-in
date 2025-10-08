@@ -2,7 +2,7 @@
 # Rename to PKGBUILD to build via makepkg
 _pkgname=nec-in
 pkgname=$_pkgname-git
-pkgver=1671011855
+pkgver=1759378017
 pkgrel=1
 pkgdesc="minimal monospace font"
 arch=('any')
@@ -29,6 +29,18 @@ build() {
 }
 
 package() {
-	install -dm755 "$pkgdir/usr/share/fonts/$_pkgname/"
-	install -Dm644 -t "$pkgdir/usr/share/fonts/$_pkgname/" "$srcdir/$_pkgname/build/"nec-in.*
+	target_dir="/usr/share/$_pkgname/"
+
+	while read ext dir
+		do
+			install -dm755 "$pkgdir/$dir"
+			install -Dm644 -t "$pkgdir/$dir" "$srcdir/$_pkgname/build/"nec-in."$ext"
+		done <<-DD
+			ttf	/usr/share/fonts/$_pkgname/
+			psf.gz	/usr/share/kbd/consolefonts/
+			pf2	/usr/share/grub/
+			flf	/usr/share/figlet/
+			woff2	$target_dir
+			bdf	$target_dir
+		DD
 }
